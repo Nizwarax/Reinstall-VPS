@@ -109,22 +109,22 @@ case $N in
     bash ~/Core_Install.sh -u 20.04 -a -v 64 $UbuntuMirrors $CXTaddLine
     ;;
   21)
-    echo -e "\nInstall...Windows Server 2022\n"
+    echo -e "\nInstall...Windows Server 2022 (English)\n"
     read -s -n1 -p "(Press any key to continue...)"
-    bash ~/Core_Install.sh -a -v 64 -dd "https://odc.cxthhhhh.com/d/SyStem/Windows_DD_Disks/Disk_Windows_Server_2022_DataCenter_CN_v2.12.vhd.gz" $DebianMirrors $CXTaddLine
+    bash ~/Core_Install.sh -a -v 64 -dd "https://dl.lamp.sh/vhd/en-us_win2022.xz" $DebianMirrors $CXTaddLine
     ;;
   22)
-    echo -e "\nInstall...Windows Server 2019\n"
+    echo -e "\nInstall...Windows Server 2019 (CN)\n"
     read -s -n1 -p "(Press any key to continue...)"
     bash ~/Core_Install.sh -a -v 64 -dd "https://odc.cxthhhhh.com/d/SyStem/Windows_DD_Disks/Disk_Windows_Server_2019_DataCenter_CN_v5.1.vhd.gz" $DebianMirrors $CXTaddLine
     ;;
   23)
-    echo -e "\nInstall...Windows Server 2016\n"
+    echo -e "\nInstall...Windows Server 2016 (CN)\n"
     read -s -n1 -p "(Press any key to continue...)"
     bash ~/Core_Install.sh -a -v 64 -dd "https://odc.cxthhhhh.com/d/SyStem/Windows_DD_Disks/Disk_Windows_Server_2016_DataCenter_CN_v4.12.vhd.gz" $DebianMirrors $CXTaddLine
     ;;
   24)
-    echo -e "\nInstall...Windows Server 2012 R2\n"
+    echo -e "\nInstall...Windows Server 2012 R2 (CN)\n"
     read -s -n1 -p "(Press any key to continue...)"
     bash ~/Core_Install.sh -a -v 64 -dd "https://odc.cxthhhhh.com/d/SyStem/Windows_DD_Disks/Disk_Windows_Server_2012R2_DataCenter_CN_v4.29.vhd.gz" $DebianMirrors $CXTaddLine
     ;;
