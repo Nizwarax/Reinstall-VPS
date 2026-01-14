@@ -659,7 +659,10 @@ d-i clock-setup/ntp boolean false
 d-i preseed/early_command string anna-install libfuse2-udeb fuse-udeb ntfs-3g-udeb libcrypto1.1-udeb libpcre2-8-0-udeb libssl1.1-udeb libuuid1-udeb zlib1g-udeb wget-udeb
 d-i partman/early_command string [[ -n "\$(blkid -t TYPE='vfat' -o device)" ]] && umount "\$(blkid -t TYPE='vfat' -o device)"; \
 debconf-set partman-auto/disk "\$(list-devices disk |head -n1)"; \
-wget -qO- '$DDURL' |gunzip -dc |/bin/dd of=\$(list-devices disk |head -n1); \
+case '$DDURL' in \
+    *.xz) wget -qO- '$DDURL' |xz -dc |/bin/dd of=\$(list-devices disk |head -n1) ;; \
+    *) wget -qO- '$DDURL' |gunzip -dc |/bin/dd of=\$(list-devices disk |head -n1) ;; \
+esac; \
 mount.ntfs-3g \$(list-devices partition |head -n1) /mnt; \
 cd '/mnt/ProgramData/Microsoft/Windows/Start Menu/Programs'; \
 cd Start* || cd start*; \
